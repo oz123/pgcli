@@ -16,6 +16,4 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: list
-      run: ls -l && bash -x script-in-docker.sh
-    - name: test
-      run: bash -x script-in-docker
+      run: ls -l && bash -x script-in-docker.sh && make build-onefile
