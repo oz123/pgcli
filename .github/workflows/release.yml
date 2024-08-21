@@ -16,4 +16,4 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: test
-      run: ls -l
+      run: bash -x script-in-docker
