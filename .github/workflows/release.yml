@@ -1,0 +1,19 @@
+name: release
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+    branches:
+      - main
+
+permissions:  # Set permissions for the GITHUB_TOKEN
+  contents: write  # Grant write permission to contents
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: rockylinux:8
+    steps:
+    - uses: actions/checkout@v4
+    - name: test
+      run: ls -l
