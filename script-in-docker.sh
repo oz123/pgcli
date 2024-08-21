@@ -1,8 +1,8 @@
-dnf install 'dnf-command(config-manager)'
-dnf install 'dnf-command(config-manager)'
+dnf install -y 'dnf-command(config-manager)'
+dnf install -y 'dnf-command(config-manager)'
 dnf config-manager --set-enabled powertools
 
-dnf install epel-release
+dnf install -y epel-release
 
 dnf install -y gcc make python3-devel python3-pip
 dnf install -y python3.8
