@@ -15,11 +15,8 @@ jobs:
       image: rockylinux:8
     steps:
     - uses: actions/checkout@v4
-    - name: build binary
-      run: |
-        echo "that" > pgcli-linux-x86_64.exe
-        chmod +x pgcli-linux-x86_64.exe
-    #  run: bash -x script-in-docker.sh
+      name: build binary
+      run: bash -x script-in-docker-rocky.sh
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
@@ -31,11 +28,8 @@ jobs:
       image: alpine:3.16
     steps:
     - uses: actions/checkout@v4
-    - name: build with musl
-      run: |
-        echo "that" > pgcli-linux-musl-x86_64.exe
-        chmod +x pgcli-linux-musl-x86_64.exe
-    #  run: bash -x script-in-docker.sh
+      name: build with musl
+      run: bash -x script-in-docker-alpine.sh
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
