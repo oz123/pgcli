@@ -42,10 +42,8 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Download artifacts
       uses: actions/download-artifact@v4
-      with:
-        path: ./artifacts
     - name: list
-      run: ls -ll artifacts/
+      run: ls -ll
     - name: upload build artifact to release
       uses: softprops/action-gh-release@v2
       with:
