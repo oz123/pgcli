@@ -46,6 +46,7 @@ jobs:
       run: ls -ll
     - name: upload build artifact to release
       uses: softprops/action-gh-release@v2
+      run: ll -ll
       with:
         files: |
           /home/runner/work/pgcli/pgcli/pgcli-linux-x86_64.exe
