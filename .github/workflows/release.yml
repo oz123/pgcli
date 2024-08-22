@@ -15,6 +15,13 @@ jobs:
       image: rockylinux:8
     steps:
     - uses: actions/checkout@v4
-    - name: list
-      run: ls -l && bash -x script-in-docker.sh
+    - name: build binary
+      run: |
+         echo "this" > pgcli-Linux-x86_64.exe
+      #run: bash -x script-in-docker.sh
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: pgcli-static-linux-x86_64
+        path: pgcli-Linux-x86_64.exe
     
