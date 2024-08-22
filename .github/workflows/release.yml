@@ -16,10 +16,10 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: build binary
-      run: |
-        echo "that" > pgcli-linux-x86_64.exe
-        chmod +x pgcli-linux-x86_64.exe
-    #  run: bash -x script-in-docker.sh
+      #run: |
+      #  echo "that" > pgcli-linux-x86_64.exe
+      # chmod +x pgcli-linux-x86_64.exe
+      run: bash -x script-in-docker-rocky.sh
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
@@ -32,10 +32,10 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: build with musl
-      run: |
-        echo "that" > pgcli-linux-musl-x86_64.exe
-        chmod +x pgcli-linux-musl-x86_64.exe
-    #  run: bash -x script-in-docker.sh
+      run: bash -x script-in-docker-alpine.sh
+      # run: |
+      #   echo "that" > pgcli-linux-musl-x86_64.exe
+      #   chmod +x pgcli-linux-musl-x86_64.exe
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
