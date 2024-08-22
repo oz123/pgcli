@@ -49,7 +49,7 @@ jobs:
       run: ll -ll
       with:
         files: |
-          /home/runner/work/pgcli/pgcli/pgcli-linux-x86_64.exe
+           ${{ github.workspace }}/pgcli-linux-x86_64.exe/*.exe
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     
