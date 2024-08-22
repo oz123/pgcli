@@ -46,7 +46,6 @@ jobs:
       run: ls -ll
     - name: upload build artifact to release
       uses: softprops/action-gh-release@v2
-      run: ll -ll
       with:
         files: |
            ${{ github.workspace }}/pgcli-linux-x86_64.exe/*.exe
