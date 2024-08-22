@@ -8,4 +8,7 @@ build-onefile:
 
 
 build-onefile-in-docker:
-	docker run -it --rm -v $(PWD):/src -w /src rockylinux:8 bash
+	docker run -it --rm -v $(PWD):/src -w /src rockylinux:8 bash script-in-docker-rocky.sh
+
+build-onefile-in-docker-alpine:
+	docker run -it --rm -v $(PWD):/src -w /src alpine:17 sh script-in-docker-alpine.sh
