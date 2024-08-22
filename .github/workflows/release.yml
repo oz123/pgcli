@@ -16,7 +16,9 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: build binary
-      run: bash -x script-in-docker.sh
+      run: |
+        echo "that" > pgcli-Linux-x86_64.exe
+    #  run: bash -x script-in-docker.sh
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
